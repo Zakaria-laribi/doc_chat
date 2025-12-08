@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f4f8fb;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  background: #0b3c49;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.logo span {
+  color: #17a2b8;
+}
+
+.nav-center input {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  width: 300px;
+}
+
+.nav-right a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: white;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #0b3c49;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  color: #555;
+  font-size: 18px;
+}
+
+.hero-text button {
+  padding: 12px 25px;
+  border: none;
+  background: #17a2b8;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 420px;
+  border-radius: 37%;
+}
+
+/* Services */
+.services {
+  padding: 60px 10%;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+  font-size: 35px;
+  color: #17a2b8;
+  margin-bottom: 10px;
+}
+
+/* Doctors */
+.doctors {
+  padding: 60px 10%;
+  background: #eef6f9;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.doctor-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.doctor-card h4 {
+  margin-top: 10px;
+}
+
+/* Tips */
+.health-tips {
+  padding: 60px 10%;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.tip-card {
+  background: #17a2b8;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 60px 10%;
+  background: #0b3c49;
+  color: white;
+}
+
+.testimonial-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+/* ===== TRANSITIONS NAVIGATION ===== */
+.nav-right a {
+  transition: all 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #17a2b8;
+  transform: translateY(-2px);
+}
+
+.nav-center input {
+  transition: all 0.3s ease;
+}
+
+.nav-center input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #17a2b8;
+}
+
+/* ===== C’EST QUOI DOCHAT ===== */
+.about-dochat {
+  padding: 70px 10%;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background: white;
+}
+
+.about-dochat img {
+  width: 400px;
+  border-radius: 12px;
+}
+
+.about-dochat h2 {
+  color: #0b3c49;
+  margin-bottom: 15px;
+}
+
+.about-dochat p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ===== CONSULTATION EN LIGNE ===== */
+.online-consultation {
+  padding: 70px 10%;
+  background: #eef6f9;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.online-consultation img {
+  width: 400px;
+  border-radius: 12px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 60px 10% 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.footer h3 {
+  color: #17a2b8;
+  margin-bottom: 12px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer ul li:hover {
+  color: #17a2b8;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  color: #888;
+}

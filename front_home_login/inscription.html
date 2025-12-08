@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription - DocChat Maroc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/inscription.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <h1 class="logo">DocChat <span>Maroc</span></h1>
+      <p class="slogan">Créer un compte médical sécurisé</p>
+    </div>
+
+    <div class="card-body">
+      <form id="registerForm" novalidate>
+
+        <label for="role">Type de compte</label>
+        <select id="role" required>
+          <option value="">-- Choisir un rôle --</option>
+          <option value="patient">Patient</option>
+          <option value="medecin">Médecin</option>
+        </select>
+
+        <label for="fullname">Nom complet</label>
+        <input type="text" id="fullname" placeholder="Nom & Prénom" required>
+
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" placeholder="exemple@email.com" required>
+
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" placeholder="********" required>
+
+        <label for="confirmPassword">Confirmer le mot de passe</label>
+        <input type="password" id="confirmPassword" placeholder="********" required>
+
+        <button type="submit">Créer le compte</button>
+        <p id="errorMsg" class="error"></p>
+
+      </form>
+    </div>
+
+    <div class="card-footer">
+      <p>Déjà inscrit ? <a href="index.html">Se connecter</a></p>
+    </div>
+  </div>
+
+  <script src="./assets/js/inscription.js"></script>
+</body>
+</html>
+
