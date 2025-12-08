@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil - DocChat Maroc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/home-patient.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- 🔒 Sécurité : vérification connexion -->
+<script>
+  const user = JSON.parse(localStorage.getItem("role"));
+  if (!user) window.location.href = "indexs.html";
+</script>
+
+<!-- ✅ Navbar -->
+<header class="navbar">
+  <div class="nav-left">
+    <h2 class="logo">DocChat <span>Maroc</span></h2>
+  </div>
+
+  <div class="nav-center">
+    <input type="text" placeholder="Rechercher un médecin, spécialité...">
+  </div>
+
+  <div class="nav-right">
+    <a href="home-patient.html">Accueil</a>
+    <a href="#">Médecins</a>
+    <a href="#">Rendez-vous</a>
+    <a href="#">Messages</a>
+    <a href="#" id="logoutBtn">Déconnexion</a>
+  </div>
+</header>
+
+<!-- ✅ Section principale (style OneDoc) -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Votre santé entre vos mains</h1>
+    <p>
+      Prenez rendez-vous avec les meilleurs médecins,
+      consultez en ligne et gérez votre santé en toute sécurité
+      avec DocChat Maroc.
+    </p>
+    <button>Prendre rendez-vous</button>
+  </div>
+
+  <div class="hero-image">
+    <img src="./assets/images/first image explicatif.jpg" alt="santé">
+  </div>
+</section>
+
+
+<section class="about-dochat">
+  <img src="./assets/images/WhatsApp Image 2025-12-08 à 21.27.54_bf9167c9.jpg" alt="DocChat Maroc">
+
+  <div>
+    <h2>C’est quoi DocChat Maroc ?</h2>
+    <p>
+      DocChat Maroc est une plateforme digitale de santé qui facilite la communication
+      entre les patients et les médecins partout au Maroc.
+    </p>
+    <p>
+      Elle permet de prendre des rendez-vous, consulter en ligne et accéder aux services
+      médicaux en toute sécurité.
+    </p>
+    <p>
+      Notre mission est de rapprocher les patients des meilleurs professionnels de santé.
+    </p>
+  </div>
+</section>
+
+<section class="online-consultation">
+  <div>
+    <h2>Consultation médicale en ligne</h2>
+    <p>
+      Grâce à la consultation en ligne avec notre site, les patients peuvent réserver une
+      consultation vidéo en direct avec les praticiens et obtenir un traitement et des conseils
+      de leur part.
+    </p>
+    <p>
+      Les médecins peuvent également fixer des tarifs pour la consultation en ligne et leurs
+      disponibilités.
+    </p>
+  </div>
+
+  <img src="./assets/images/consultation en ligne.jpeg" alt="Consultation en ligne">
+</section>
+
+<!-- ✅ Services -->
+<section class="services">
+  <h2>Nos Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <i class="fa-solid fa-user-doctor"></i>
+      <h3>Consultation en ligne</h3>
+      <p>Consultez un médecin sans vous déplacer.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-calendar-check"></i>
+      <h3>Prise de rendez-vous</h3>
+      <p>Réservez facilement vos consultations.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-file-medical"></i>
+      <h3>Dossier médical</h3>
+      <p>Accès sécurisé à votre historique médical.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Médecins -->
+<section class="doctors">
+  <h2>Nos Médecins</h2>
+  <div class="doctor-grid" id="doctorGrid"></div>
+</section>
+
+<!-- ✅ Conseils santé -->
+<section class="health-tips">
+  <h2>Conseils Santé</h2>
+  <div class="tips-grid">
+    <div class="tip-card">💧 Buvez au moins 1,5L d’eau par jour</div>
+    <div class="tip-card">🥗 Mangez équilibré</div>
+    <div class="tip-card">🏃‍♂️ Faites du sport régulièrement</div>
+    <div class="tip-card">😴 Dormez au moins 7h par nuit</div>
+  </div>
+</section>
+
+<!-- ✅ Témoignages -->
+<section class="testimonials">
+  <h2>Avis des Patients</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>“Service rapide et médecins compétents.”</p>
+      <h4>- Sara M.</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>“Très pratique pour prendre rendez-vous.”</p>
+      <h4>- Youssef A.</h4>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div>
+      <h3>DocChat Maroc</h3>
+      <p>
+        Plateforme marocaine de prise de rendez-vous et de consultation médicale en ligne.
+        Gérez vos consultations, vos médecins et votre santé en toute simplicité.
+      </p>
+    </div>
+
+    <div>
+      <h3>Recherches fréquentes</h3>
+      <ul>
+        <li>Cardiologue</li>
+        <li>Dentiste</li>
+        <li>Psychologue</li>
+        <li>ORL</li>
+        <li>Généraliste</li>
+        <li>Diabétologue</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Villes</h3>
+      <ul>
+        <li>ORL à Marrakech</li>
+        <li>Cardiologue à Casablanca</li>
+        <li>Dentiste à Rabat</li>
+        <li>Gynécologue à Tanger</li>
+        <li>Urologue à Fès</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Ressources</h3>
+      <ul>
+        <li>Tarifs</li>
+        <li>FAQ</li>
+        <li>Contact</li>
+        <li>Conditions</li>
+        <li>Politique de confidentialité</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 DocChat Maroc – Tous droits réservés
+  </div>
+</footer>
+
+
+<script src="./assets/js/home-patient.js"></script>
+</body>
+</html>
+

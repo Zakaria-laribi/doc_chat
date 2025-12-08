@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion - DocChat Maroc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+
+  <!-- Symboles santé -->
+ 
+  <div class="card">
+    <div class="card-header">
+      <h1 class="logo">DocChat <span>Maroc</span></h1>
+      <p class="slogan">Votre santé, notre priorité</p>
+    </div>
+
+    <div class="card-body">
+      <form id="loginForm" novalidate>
+
+        <label for="role">Type de compte</label>
+        <select id="role" required>
+          <option value="">-- Choisir un rôle --</option>
+          <option value="patient">Patient</option>
+          <option value="medecin">Médecin</option>
+        </select>
+
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" placeholder="exemple@email.com" required>
+
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" placeholder="********" required>
+
+        <button type="submit">Se connecter</button>
+        <p id="errorMsg" class="error"></p>
+      </form>
+    </div>
+
+    <div class="card-footer">
+      <p>
+        Pas encore inscrit ?
+        <a href="inscription.html">Créer un compte</a>
+      </p>
+      <p class="admin-link">
+        <a href="#">mots de passe oublier</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="./assets/js/login.js"></script>
+</body>
+</html>
