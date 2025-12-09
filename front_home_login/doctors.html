@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Nos Médecins - DocChat Maroc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/doctors.css">
+</head>
+<body>
+
+
+<header class="navbar">
+  <div class="nav-left">
+    <h2 class="logo">DocChat <span>Maroc</span></h2>
+  </div>
+
+  <div class="nav-center">
+    <input type="text" placeholder="Rechercher un médecin, spécialité...">
+  </div>
+
+  <div class="nav-right">
+    <a href="home-patient.html">Accueil</a>
+    <a id="btnMedecins" href="#">Médecins</a>
+    <a href="#">Rendez-vous</a>
+    <a href="#">Messages</a>
+    <a href="#" id="logoutBtn">Déconnexion</a>
+  </div>
+</header>
+
+
+
+<div class="page-content">
+    <h1 class="title">Liste des Médecins</h1>
+    <div class="search-box">
+         <input type="text" id="searchName" placeholder="Rechercher par nom...">
+         <input type="text" id="searchSpec" placeholder="Rechercher par spécialité...">
+    </div>
+    <div class="doctors-container" id="doctorsContainer"></div>
+</div>
+
+
+<script src="./assets/js/doctors.js"></script>
+</body>
+</html>

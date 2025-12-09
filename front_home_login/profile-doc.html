@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Médecin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/profile-doc.css">
+</head>
+<body>
+
+    <header class="navbar">
+  <div class="nav-left">
+    <h2 class="logo">DocChat <span>Maroc</span></h2>
+  </div>
+
+  <div class="nav-center">
+    <input type="text" placeholder="Rechercher un médecin, spécialité...">
+  </div>
+
+  <div class="nav-right">
+    <a href="home-patient.html">Accueil</a>
+    <a id="btnMedecins" href="#">Médecins</a>
+    <a href="#">Rendez-vous</a>
+    <a href="#">Messages</a>
+    <a href="#" id="logoutBtn">Déconnexion</a>
+  </div>
+</header>
+
+<div class="profile-container">
+  <div class="profile-card">
+    <img id="docImage" src="">
+    
+    <h2 id="docName"></h2>
+    <p id="docSpec"></p>
+
+    <div class="rating">⭐ 4.8 / 5</div>
+    <div class="location">📍 Casablanca, Maroc</div>
+
+    <div class="buttons">
+      <button class="btn-online">Réserver en ligne</button>
+      <button class="btn-place">Réserver sur place</button>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/js/profile-doc.js"></script>
+</body>
+</html>

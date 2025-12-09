@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Doc IA - DocChat Maroc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/doc-ia.css">
+</head>
+<body>
+
+
+<!-- ✅ Navbar -->
+<header class="navbar">
+  <div class="nav-left">
+    <h2 class="logo">DocChat <span>Maroc</span></h2>
+  </div>
+
+  <div class="nav-center">
+    <input type="text" placeholder="Rechercher un médecin, spécialité...">
+  </div>
+
+  <div class="nav-right">
+    <a href="home-patient.html">Accueil</a>
+    <a id="btnMedecins" href="#">Médecins</a>
+    <a href="#">Rendez-vous</a>
+    <a href="#">Messages</a>
+    <a href="#" id="logoutBtn">Déconnexion</a>
+  </div>
+</header>
+
+<!-- CONTENU PRINCIPAL -->
+<div class="main-container">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Mes Chats</h3>
+    <ul>
+      <li id="newChat">+ Nouveau Chat</li>
+      <li>Chat avec Cardiologue</li>
+      <li>Chat avec Dentiste</li>
+      <li>Chat avec Généraliste</li>
+    </ul>
+  </aside>
+
+  <!-- ZONE CHAT -->
+  <div class="chat-container">
+    <h2>Doc IA</h2>
+    <div class="chat-box" id="chatBox"></div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Posez votre question...">
+      <button id="sendBtn">Envoyer</button>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/js/doc-ia.js"></script>
+</body>
+</html>
