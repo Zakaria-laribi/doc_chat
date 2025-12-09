@@ -40,4 +40,11 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.clear();
   window.location.href = "index.html";
 });
+
+document.getElementById("btnMedecins").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.href = "doctors.html"; 
+});
+
+
  

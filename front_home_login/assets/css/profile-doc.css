@@ -1,0 +1,152 @@
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0b3c49, #17a2b8);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #0b3c49;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo span {
+  color: #17a2b8;
+}
+
+.nav-center input {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  width: 300px;
+}
+
+.nav-right a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #17a2b8;
+  transform: translateY(-2px);
+}
+
+/* ===== CONTAINER DU PROFIL ===== */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(88vh - 70px);
+}
+
+/* ===== CARTE DU PROFIL ===== */
+.profile-card {
+  background: white;
+  max-width: 420px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fade 0.6s ease;
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #17a2b8;
+}
+
+.profile-card h2 {
+  margin: 15px 0 5px;
+  color: #0b3c49;
+}
+
+.profile-card p {
+  color: #555;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+/* ===== RATING & LOCATION ===== */
+.rating, .location {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ===== BOUTONS ===== */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-online {
+  background: #17a2b8;
+}
+
+.btn-place {
+  background: #0b3c49;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fade {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 20px;
+  }
+
+  .nav-center input {
+    width: 180px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
