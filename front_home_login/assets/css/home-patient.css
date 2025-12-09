@@ -160,6 +160,7 @@ body {
   background: rgba(255,255,255,0.1);
   padding: 20px;
   border-radius: 10px;
+      margin-top: 28px;
 }
 /* ===== TRANSITIONS NAVIGATION ===== */
 .nav-right a {
@@ -258,3 +259,18 @@ body {
   padding-top: 15px;
   color: #888;
 }
+
+
+.doctor-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.doctor-card {
+  text-align: center;
+  padding: 15px;
+}
+
