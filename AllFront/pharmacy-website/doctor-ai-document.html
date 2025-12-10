@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse IA de Documents</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/doctor.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('doctor.html')" class="btn-back">← Retour</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>📄 Analyse IA de Documents Médicaux</h1>
+            <p>Téléchargez vos documents pour une analyse intelligente</p>
+        </header>
+
+        <div class="document-analyzer">
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-icon">📤</div>
+                <h3>Glissez-déposez votre document ici</h3>
+                <p>ou cliquez pour parcourir</p>
+                <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                <button onclick="document.getElementById('fileInput').click()" class="btn-upload">
+                    Choisir un fichier
+                </button>
+                <p class="upload-info">Formats acceptés : PDF, JPG, PNG (Max 10MB)</p>
+            </div>
+
+            <div id="filePreview" class="file-preview" style="display:none;">
+                <h3>Document sélectionné :</h3>
+                <div class="file-info">
+                    <span id="fileName"></span>
+                    <span id="fileSize"></span>
+                </div>
+                <button id="analyzeBtn" class="btn-primary">Analyser le document</button>
+            </div>
+
+            <div id="analysisResult" class="analysis-result" style="display:none;">
+                <h3>Résultat de l'analyse :</h3>
+                <div class="result-content">
+                    <div class="result-section">
+                        <h4>🔍 Type de document :</h4>
+                        <p id="docType"></p>
+                    </div>
+                    <div class="result-section">
+                        <h4>📊 Informations extraites :</h4>
+                        <div id="extractedInfo"></div>
+                    </div>
+                    <div class="result-section">
+                        <h4>💡 Recommandations :</h4>
+                        <div id="recommendations"></div>
+                    </div>
+                </div>
+                <button onclick="resetAnalyzer()" class="btn-secondary">Analyser un autre document</button>
+            </div>
+
+            <div id="loadingAnimation" class="loading" style="display:none;">
+                <div class="spinner"></div>
+                <p>Analyse en cours...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/ai-document.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation IA</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/doctor.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('doctor.html')" class="btn-back">← Retour</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>💬 Consultation avec IA</h1>
+            <p>Décrivez vos symptômes et obtenez un pré-diagnostic</p>
+        </header>
+
+        <div class="consultation-container">
+            <div class="chat-box" id="chatBox">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Bonjour ! Je suis votre assistant médical IA. Comment puis-je vous aider aujourd'hui ?</p>
+                        <p>Veuillez décrire vos symptômes en détail.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <textarea 
+                    id="chatInput" 
+                    placeholder="Décrivez vos symptômes (ex: J'ai de la fièvre depuis 2 jours, maux de tête...)"
+                    rows="3"
+                ></textarea>
+                <button id="sendBtn" class="btn-send">
+                    <span>Envoyer</span>
+                    <span class="send-icon">📤</span>
+                </button>
+            </div>
+
+            <div class="quick-questions">
+                <p>Questions fréquentes :</p>
+                <button class="quick-btn" onclick="quickQuestion('Maux de tête persistants')">Maux de tête</button>
+                <button class="quick-btn" onclick="quickQuestion('Fièvre et fatigue')">Fièvre</button>
+                <button class="quick-btn" onclick="quickQuestion('Douleurs abdominales')">Douleurs abdominales</button>
+                <button class="quick-btn" onclick="quickQuestion('Toux et rhume')">Toux/Rhume</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>

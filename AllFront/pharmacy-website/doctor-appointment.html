@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre Rendez-vous</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/doctor.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('doctor.html')" class="btn-back">← Retour</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>📅 Prendre Rendez-vous</h1>
+            <p>Choisissez votre médecin et réservez votre créneau</p>
+        </header>
+
+        <div class="appointment-container">
+            <div class="appointment-filters">
+                <div class="filter-group">
+                    <label>Spécialité :</label>
+                    <select id="specialtyFilter">
+                        <option value="">Toutes les spécialités</option>
+                        <option value="generaliste">Généraliste</option>
+                        <option value="cardiologue">Cardiologue</option>
+                        <option value="dermatologue">Dermatologue</option>
+                        <option value="pediatre">Pédiatre</option>
+                        <option value="ophtalmologue">Ophtalmologue</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Ville :</label>
+                    <select id="cityFilter">
+                        <option value="">Toutes les villes</option>
+                        <option value="casablanca">Casablanca</option>
+                        <option value="rabat">Rabat</option>
+                        <option value="marrakech">Marrakech</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="doctors-list" id="doctorsList">
+                <!-- Docteur 1 -->
+                <div class="doctor-card-appointment">
+                    <div class="doctor-info">
+                        <div class="doctor-avatar">👨‍⚕️</div>
+                        <div class="doctor-details">
+                            <h3>Dr. Ahmed Benali</h3>
+                            <p class="specialty">Généraliste</p>
+                            <p class="location">📍 Casablanca, Maarif</p>
+                            <p class="experience">⭐ 15 ans d'expérience</p>
+                        </div>
+                    </div>
+                    <div class="doctor-availability">
+                        <h4>Disponibilités :</h4>
+                        <div class="time-slots">
+                            <button class="time-slot">Lun 14:00</button>
+                            <button class="time-slot">Mar 10:00</button>
+                            <button class="time-slot">Mer 16:00</button>
+                            <button class="time-slot">Jeu 09:00</button>
+                        </div>
+                        <button class="btn-primary" onclick="bookAppointment('Dr. Ahmed Benali')">
+                            Réserver
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Docteur 2 -->
+                <div class="doctor-card-appointment">
+                    <div class="doctor-info">
+                        <div class="doctor-avatar">👩‍⚕️</div>
+                        <div class="doctor-details">
+                            <h3>Dr. Sarah El Amrani</h3>
+                            <p class="specialty">Cardiologue</p>
+                            <p class="location">📍 Casablanca, CIL</p>
+                            <p class="experience">⭐ 20 ans d'expérience</p>
+                        </div>
+                    </div>
+                    <div class="doctor-availability">
+                        <h4>Disponibilités :</h4>
+                        <div class="time-slots">
+                            <button class="time-slot">Lun 11:00</button>
+                            <button class="time-slot">Mer 14:30</button>
+                            <button class="time-slot">Ven 10:00</button>
+                        </div>
+                        <button class="btn-primary" onclick="bookAppointment('Dr. Sarah El Amrani')">
+                            Réserver
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div id="appointmentModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>✅ Rendez-vous confirmé !</h3>
+            <p id="appointmentDetails"></p>
+            <button onclick="closeModal()" class="btn-primary">Fermer</button>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/appointments.js"></script>
+</body>
+</html>

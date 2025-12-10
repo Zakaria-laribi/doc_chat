@@ -1,0 +1,302 @@
+.profile-header {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+}
+
+.profile-info h1 {
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.user-role {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.user-email {
+    color: #718096;
+}
+
+.profile-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.profile-card h3 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.info-label {
+    font-size: 12px;
+    color: #718096;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.medical-records {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.record-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.record-icon {
+    font-size: 32px;
+}
+
+.record-details h4 {
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.record-details p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.consultations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.consultation-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.consultation-date {
+    background: #667eea;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 100px;
+}
+
+.consultation-details {
+    flex: 1;
+}
+
+.consultation-details h4 {
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.consultation-details p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.btn-view {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-view:hover {
+    border-color: #667eea;
+    background: #f7fafc;
+}
+
+.prescriptions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prescription-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.prescription-icon {
+    font-size: 40px;
+}
+
+.prescription-details {
+    flex: 1;
+}
+
+.prescription-details h4 {
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.prescription-details p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.prescription-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.prescription-details li {
+    color: #4a5568;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.btn-download {
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-download:hover {
+    background: #5568d3;
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+/* Switch Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #667eea;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .consultation-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prescription-item {
+        flex-direction: column;
+    }
+}

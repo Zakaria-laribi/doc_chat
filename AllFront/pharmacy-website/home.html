@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaCare - Accueil</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>🏥 PharmaCare</h2>
+        </div>
+        <div class="nav-user">
+            <span id="welcomeUser">Bienvenue</span>
+            <button id="logoutBtn" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Bienvenue sur PharmaCare</h1>
+            <p>Choisissez le service dont vous avez besoin</p>
+        </header>
+
+        <div class="services-grid">
+            <!-- Service Docteur -->
+            <div class="service-card doctor-card" onclick="goToPage('doctor.html')">
+                <div class="service-icon">👨‍⚕️</div>
+                <h3>Espace Docteur</h3>
+                <p>Consultations, analyses IA et rendez-vous médicaux</p>
+                <ul class="service-features">
+                    <li>📄 Analyse de documents</li>
+                    <li>💬 Consultation IA</li>
+                    <li>📅 Prendre rendez-vous</li>
+                </ul>
+                <button class="btn-service">Accéder</button>
+            </div>
+
+            <!-- Service Profil -->
+            <div class="service-card profile-card" onclick="goToPage('profile.html')">
+                <div class="service-icon">👤</div>
+                <h3>Mon Profil</h3>
+                <p>Gérez vos informations personnelles et médicales</p>
+                <ul class="service-features">
+                    <li>📋 Dossier médical</li>
+                    <li>📅 Mes consultations</li>
+                    <li>💊 Mes ordonnances</li>
+                </ul>
+                <button class="btn-service">Accéder</button>
+            </div>
+
+            <!-- Service Pharmacie -->
+            <div class="service-card pharmacy-card" onclick="goToPage('pharmacy.html')">
+                <div class="service-icon">💊</div>
+                <h3>Espace Pharmacie</h3>
+                <p>Médicaments, pharmacies de garde et assistant IA</p>
+                <ul class="service-features">
+                    <li>💊 Catalogue médicaments</li>
+                    <li>🏥 Pharmacies de garde</li>
+                    <li>🎙️ Assistant vocal IA</li>
+                </ul>
+                <button class="btn-service">Accéder</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

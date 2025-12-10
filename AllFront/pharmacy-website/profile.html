@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('home.html')" class="btn-back">← Retour</button>
+            <button id="logoutBtn" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-avatar">👤</div>
+            <div class="profile-info">
+                <h1 id="userName">John Doe</h1>
+                <p id="userRole" class="user-role">Patient</p>
+                <p id="userEmail" class="user-email">john.doe@email.com</p>
+            </div>
+        </div>
+
+        <div class="profile-sections">
+            <!-- Informations personnelles -->
+            <div class="profile-card">
+                <h3>📋 Informations Personnelles</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Téléphone :</span>
+                        <span class="info-value">+212 6XX XXX XXX</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Date de naissance :</span>
+                        <span class="info-value">15/03/1990</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Adresse :</span>
+                        <span class="info-value">Casablanca, Maroc</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Groupe sanguin :</span>
+                        <span class="info-value">A+</span>
+                    </div>
+                </div>
+                <button class="btn-secondary">Modifier</button>
+            </div>
+
+            <!-- Dossier médical -->
+            <div class="profile-card">
+                <h3>🏥 Dossier Médical</h3>
+                <div class="medical-records">
+                    <div class="record-item">
+                        <span class="record-icon">💊</span>
+                        <div class="record-details">
+                            <h4>Allergies</h4>
+                            <p>Pénicilline, Pollen</p>
+                        </div>
+                    </div>
+                    <div class="record-item">
+                        <span class="record-icon">🩺</span>
+                        <div class="record-details">
+                            <h4>Conditions chroniques</h4>
+                            <p>Hypertension</p>
+                        </div>
+                    </div>
+                    <div class="record-item">
+                        <span class="record-icon">💉</span>
+                        <div class="record-details">
+                            <h4>Vaccinations</h4>
+                            <p>COVID-19, Grippe (2024)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultations récentes -->
+            <div class="profile-card">
+                <h3>📅 Consultations Récentes</h3>
+                <div class="consultations-list">
+                    <div class="consultation-item">
+                        <div class="consultation-date">15 Nov 2024</div>
+                        <div class="consultation-details">
+                            <h4>Dr. Ahmed Benali - Généraliste</h4>
+                            <p>Consultation de routine</p>
+                        </div>
+                        <button class="btn-view">Voir détails</button>
+                    </div>
+                    <div class="consultation-item">
+                        <div class="consultation-date">03 Oct 2024</div>
+                        <div class="consultation-details">
+                            <h4>Dr. Sarah El Amrani - Cardiologue</h4>
+                            <p>Contrôle cardiaque</p>
+                        </div>
+                        <button class="btn-view">Voir détails</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ordonnances -->
+            <div class="profile-card">
+                <h3>💊 Mes Ordonnances</h3>
+                <div class="prescriptions-list">
+                    <div class="prescription-item">
+                        <div class="prescription-icon">📄</div>
+                        <div class="prescription-details">
+                            <h4>Ordonnance du 15/11/2024</h4>
+                            <p>Dr. Ahmed Benali</p>
+                            <ul>
+                                <li>Paracétamol 500mg - 3x/jour</li>
+                                <li>Ibuprofène 400mg - 2x/jour</li>
+                            </ul>
+                        </div>
+                        <button class="btn-download">📥 Télécharger</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paramètres -->
+            <div class="profile-card">
+                <h3>⚙️ Paramètres</h3>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <span>Notifications par email</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Rappels de rendez-vous</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Partage de données médicales</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

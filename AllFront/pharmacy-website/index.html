@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaCare - Connexion</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>🏥 PharmaCare</h1>
+                <p>Plateforme de Santé Intelligente</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="votre@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userRole">Type de compte</label>
+                    <select id="userRole" required>
+                        <option value="patient">Patient</option>
+                        <option value="doctor">Docteur</option>
+                        <option value="pharmacist">Pharmacien</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">Se connecter</button>
+            </form>
+
+            <div class="login-footer">
+                <a href="#">Mot de passe oublié ?</a>
+                <a href="#">Créer un compte</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

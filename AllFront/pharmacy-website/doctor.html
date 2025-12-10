@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaCare - Espace Docteur</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/doctor.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>🏥 PharmaCare</h2>
+        </div>
+        <div class="nav-actions">
+            <button onclick="goToPage('home.html')" class="btn-back">← Retour</button>
+            <button id="logoutBtn" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>👨‍⚕️ Espace Docteur</h1>
+            <p>Services médicaux intelligents à votre disposition</p>
+        </header>
+
+        <div class="doctor-services">
+            <!-- Analyse IA Document -->
+            <div class="doctor-card" onclick="goToPage('doctor-ai-document.html')">
+                <div class="card-icon">📄</div>
+                <h3>Analyse IA de Documents</h3>
+                <p>Téléchargez vos documents médicaux (ordonnances, analyses, radiographies) et obtenez une analyse détaillée par intelligence artificielle.</p>
+                <div class="card-features">
+                    <span class="feature-tag">✓ Reconnaissance OCR</span>
+                    <span class="feature-tag">✓ Analyse automatique</span>
+                    <span class="feature-tag">✓ Rapports détaillés</span>
+                </div>
+                <button class="btn-primary">Analyser un document</button>
+            </div>
+
+            <!-- Consultation IA -->
+            <div class="doctor-card" onclick="goToPage('doctor-ai-consult.html')">
+                <div class="card-icon">💬</div>
+                <h3>Consultation avec IA</h3>
+                <p>Discutez avec notre assistant médical IA pour un pré-diagnostic. Décrivez vos symptômes et recevez des conseils personnalisés.</p>
+                <div class="card-features">
+                    <span class="feature-tag">✓ Disponible 24/7</span>
+                    <span class="feature-tag">✓ Réponses instantanées</span>
+                    <span class="feature-tag">✓ Confidentialité garantie</span>
+                </div>
+                <button class="btn-primary">Démarrer une consultation</button>
+            </div>
+
+            <!-- Prendre Rendez-vous -->
+            <div class="doctor-card" onclick="goToPage('doctor-appointment.html')">
+                <div class="card-icon">📅</div>
+                <h3>Prendre Rendez-vous</h3>
+                <p>Consultez un médecin qualifié. Choisissez votre spécialiste, visualisez les disponibilités et réservez votre créneau en ligne.</p>
+                <div class="card-features">
+                    <span class="feature-tag">✓ Tous les spécialistes</span>
+                    <span class="feature-tag">✓ Réservation en ligne</span>
+                    <span class="feature-tag">✓ Rappel automatique</span>
+                </div>
+                <button class="btn-primary">Réserver maintenant</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+</body>
+</html>

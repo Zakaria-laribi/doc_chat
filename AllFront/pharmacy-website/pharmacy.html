@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Pharmacie</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pharmacy.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('home.html')" class="btn-back">← Retour</button>
+            <button id="logoutBtn" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>💊 Espace Pharmacie</h1>
+            <p>Tous vos besoins pharmaceutiques en un seul endroit</p>
+        </header>
+
+        <div class="pharmacy-services">
+            <!-- Assistant IA Vocal -->
+            <div class="pharmacy-card featured" onclick="goToPage('pharmacy-ai-voice.html')">
+                <div class="card-icon">🎙️</div>
+                <h3>Assistant IA Vocal</h3>
+                <p>Parlez à notre assistant intelligent pour obtenir des recommandations personnalisées de médicaments selon vos symptômes.</p>
+                <div class="card-features">
+                    <span class="feature-tag">✓ Reconnaissance vocale</span>
+                    <span class="feature-tag">✓ Conseils personnalisés</span>
+                    <span class="feature-tag">✓ Réponses instantanées</span>
+                </div>
+                <button class="btn-primary">Démarrer l'assistant</button>
+            </div>
+
+            <!-- Catalogue Para -->
+            <div class="pharmacy-card" onclick="goToPage('pharmacy-para.html')">
+                <div class="card-icon">💊</div>
+                <h3>Catalogue Médicaments (Para)</h3>
+                <p>Parcourez notre catalogue complet de médicaments avec descriptions détaillées, prix et disponibilité.</p>
+                <div class="card-features">
+                    <span class="feature-tag">✓ +5000 produits</span>
+                    <span class="feature-tag">✓ Prix actualisés</span>
+                    <span class="feature-tag">✓ Disponibilité en temps réel</span>
+                </div>
+                <button class="btn-primary">Voir le catalogue</button>
+            </div>
+
+            <!-- Pharmacies de garde -->
+            <div class="pharmacy-card" onclick="goToPage('pharmacy-garde.html')">
+                <div class="card-icon">🏥</div>
+                <h3>Pharmacies de Garde</h3>
+                <p>Trouvez rapidement les pharmacies ouvertes près de chez vous, 24h/24 et 7j/7.</p>
+                <div class="card-features">
+                    <span class="feature-tag">✓ Géolocalisation</span>
+                    <span class="feature-tag">✓ Horaires actualisés</span>
+                    <span class="feature-tag">✓ Itinéraire intégré</span>
+                </div>
+                <button class="btn-primary">Trouver une pharmacie</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+</body>
+</html>
+
+---
+
+## 📄 **pharmacy-ai-voice.html** - Assistant Vocal IA
+``````html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant IA Vocal</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pharmacy.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('pharmacy.html')" class="btn-back">← Retour</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>🎙️ Assistant IA Vocal</h1>
+            <p>Décrivez vos symptômes à voix haute pour obtenir des recommandations</p>
+        </header>
+
+        <div class="voice-assistant-container">
+            <div class="voice-status" id="voiceStatus">
+                <div class="voice-animation" id="voiceAnimation">
+                    <div class="pulse"></div>
+                    <div class="mic-icon">🎤</div>
+                </div>
+                <p id="statusText">Appuyez sur le microphone pour commencer</p>
+            </div>
+
+            <div class="voice-controls">
+                <button id="startVoiceBtn" class="btn-voice">
+                    <span class="mic-large">🎤</span>
+                    <span>Appuyez pour parler</span>
+                </button>
+                <button id="stopVoiceBtn" class="btn-stop" style="display:none;">
+                    <span>⏹️</span>
+                    <span>Arrêter</span>
+                </button>
+            </div>
+
+            <div class="voice-transcript" id="voiceTranscript" style="display:none;">
+                <h3>📝 Ce que j'ai entendu :</h3>
+                <p id="transcriptText"></p>
+            </div>
+
+            <div class="voice-response" id="voiceResponse" style="display:none;">
+                <h3>💊 Recommandations :</h3>
+                <div id="recommendationsContent"></div>
+            </div>
+
+            <div class="voice-tips">
+                <h4>💡 Conseils d'utilisation :</h4>
+                <ul>
+                    <li>Parlez clairement et décrivez vos symptômes en détail</li>
+                    <li>Mentionnez la durée des symptômes</li>
+                    <li>Indiquez votre âge et tout problème de santé existant</li>
+                    <li>L'assistant vous recommandera des médicaments adaptés</li>
+                </ul>
+            </div>
+
+            <div class="alternative-input">
+                <p>Préférez-vous écrire ? <button onclick="goToPage('doctor-ai-consult.html')" class="btn-link">Utiliser le chat texte</button></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/ai-voice.js"></script>
+</body>
+</html>
+
+---
+
+## 📄 **pharmacy-para.html** - Catalogue Médicaments
+`````html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue Médicaments</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pharmacy.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('pharmacy.html')" class="btn-back">← Retour</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>💊 Catalogue des Médicaments</h1>
+            <p>Recherchez et consultez notre base de données complète</p>
+        </header>
+
+        <div class="catalog-container">
+            <!-- Barre de recherche et filtres -->
+            <div class="search-filters">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 Rechercher un médicament..." onkeyup="searchMedications()">
+                </div>
+
+                <div class="filters-row">
+                    <select id="categoryFilter" onchange="filterMedications()">
+                        <option value="">Toutes catégories</option>
+                        <option value="analgesique">Analgésiques</option>
+                        <option value="antibiotique">Antibiotiques</option>
+                        <option value="antiviral">Antiviraux</option>
+                        <option value="antihistaminique">Antihistaminiques</option>
+                        <option value="vitamines">Vitamines</option>
+                    </select>
+
+                    <select id="prescriptionFilter" onchange="filterMedications()">
+                        <option value="">Tous</option>
+                        <option value="sans">Sans ordonnance</option>
+                        <option value="avec">Sur ordonnance</option>
+                    </select>
+
+                    <select id="sortFilter" onchange="sortMedications()">
+                        <option value="name">Trier par nom</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Liste des médicaments -->
+            <div class="medications-grid" id="medicationsGrid">
+                <!-- Médicament 1 -->
+                <div class="medication-card">
+                    <div class="medication-header">
+                        <h3>Paracétamol 500mg</h3>
+                        <span class="price">25 MAD</span>
+                    </div>
+                    <div class="medication-info">
+                        <p class="category">📦 Analgésique / Antipyrétique</p>
+                        <p class="prescription">✅ Sans ordonnance</p>
+                        <p class="stock available">✓ En stock</p>
+                    </div>
+                    <div class="medication-description">
+                        <p>Traitement de la douleur et de la fièvre. Boîte de 20 comprimés.</p>
+                    </div>
+                    <div class="medication-actions">
+                        <button class="btn-details" onclick="showMedicationDetails('paracetamol')">Détails</button>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Médicament 2 -->
+                <div class="medication-card">
+                    <div class="medication-header">
+                        <h3>Ibuprofène 400mg</h3>
+                        <span class="price">35 MAD</span>
+                    </div>
+                    <div class="medication-info">
+                        <p class="category">📦 Anti-inflammatoire</p>
+                        <p class="prescription">✅ Sans ordonnance</p>
+                        <p class="stock available">✓ En stock</p>
+                    </div>
+                    <div class="medication-description">
+                        <p>Anti-inflammatoire non stéroïdien. Boîte de 20 comprimés.</p>
+                    </div>
+                    <div class="medication-actions">
+                        <button class="btn-details" onclick="showMedicationDetails('ibuprofene')">Détails</button>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Médicament 3 -->
+                <div class="medication-card">
+                    <div class="medication-header">
+                        <h3>Amoxicilline 1g</h3>
+                        <span class="price">65 MAD</span>
+                    </div>
+                    <div class="medication-info">
+                        <p class="category">📦 Antibiotique</p>
+                        <p class="prescription">⚠️ Sur ordonnance</p>
+                        <p class="stock available">✓ En stock</p>
+                    </div>
+                    <div class="medication-description">
+                        <p>Antibiotique à large spectre. Boîte de 14 comprimés.</p>
+                    </div>
+                    <div class="medication-actions">
+                        <button class="btn-details" onclick="showMedicationDetails('amoxicilline')">Détails</button>
+                        <button class="btn-add-cart" disabled>Ordonnance requise</button>
+                    </div>
+                </div>
+
+                <!-- Médicament 4 -->
+                <div class="medication-card">
+                    <div class="medication-header">
+                        <h3>Vitamine C 1000mg</h3>
+                        <span class="price">45 MAD</span>
+                    </div>
+                    <div class="medication-info">
+                        <p class="category">📦 Complément alimentaire</p>
+                        <p class="prescription">✅ Sans ordonnance</p>
+                        <p class="stock available">✓ En stock</p>
+                    </div>
+                    <div class="medication-description">
+                        <p>Complément vitaminique. Boîte de 30 comprimés effervescents.</p>
+                    </div>
+                    <div class="medication-actions">
+                        <button class="btn-details" onclick="showMedicationDetails('vitaminec')">Détails</button>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Médicament 5 -->
+                <div class="medication-card">
+                    <div class="medication-header">
+                        <h3>Doliprane 1000mg</h3>
+                        <span class="price">30 MAD</span>
+                    </div>
+                    <div class="medication-info">
+                        <p class="category">📦 Analgésique</p>
+                        <p class="prescription">✅ Sans ordonnance</p>
+                        <p class="stock limited">⚠️ Stock limité</p>
+                    </div>
+                    <div class="medication-description">
+                        <p>Paracétamol dosé à 1000mg. Boîte de 8 comprimés.</p>
+                    </div>
+                    <div class="medication-actions">
+                        <button class="btn-details" onclick="showMedicationDetails('doliprane')">Détails</button>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Médicament 6 -->
+                <div class="medication-card">
+                    <div class="medication-header">
+                        <h3>Cétirizine 10mg</h3>
+                        <span class="price">40 MAD</span>
+                    </div>
+                    <div class="medication-info">
+                        <p class="category">📦 Antihistaminique</p>
+                        <p class="prescription">✅ Sans ordonnance</p>
+                        <p class="stock available">✓ En stock</p>
+                    </div>
+                    <div class="medication-description">
+                        <p>Traitement des allergies. Boîte de 15 comprimés.</p>
+                    </div>
+                    <div class="medication-actions">
+                        <button class="btn-details" onclick="showMedicationDetails('cetirizine')">Détails</button>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal détails médicament -->
+    <div id="medicationModal" class="modal" style="display:none;">
+        <div class="modal-content large">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+            <button onclick="closeModal()" class="btn-primary">Fermer</button>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/medications.js"></script>
+</body>
+</html>
+
+---
+
+## 📄 **pharmacy-garde.html** - Pharmacies de Garde
+````html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacies de Garde</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pharmacy.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><h2>🏥 PharmaCare</h2></div>
+        <div class="nav-actions">
+            <button onclick="goToPage('pharmacy.html')" class="btn-back">← Retour</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>🏥 Pharmacies de Garde</h1>
+            <p>Trouvez les pharmacies ouvertes près de vous</p>
+        </header>
+
+        <div class="garde-container">
+            <!-- Filtres et recherche -->
+            <div class="garde-filters">
+                <div class="filter-group">
+                    <label>🌍 Ville :</label>
+                    <select id="citySelect" onchange="filterPharmacies()">
+                        <option value="casablanca">Casablanca</option>
+                        <option value="rabat">Rabat</option>
+                        <option value="marrakech">Marrakech</option>
+                        <option value="fes">Fès</option>
+                        <option value="tanger">Tanger</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>📅 Date :</label>
+                    <input type="date" id="dateSelect" onchange="filterPharmacies()">
+                </div>
+
+                <button class="btn-locate" onclick="geolocate()">
+                    📍 Me géolocaliser
+                </button>
+            </div>
+
+            <!-- Carte (simulation) -->
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <p>🗺️ Carte interactive</p>
+                    <p class="map-info">Cliquez sur une pharmacie pour voir les détails</p>
+                </div>
+            </div>
+
+            <!-- Liste des pharmacies de garde -->
+            <div class="pharmacies-list">
+                <h3>📋 Pharmacies de garde aujourd'hui</h3>
+
+                <!-- Pharmacie 1 -->
+                <div class="pharmacy-card-garde">
+                    <div class="pharmacy-status open">● OUVERTE</div>
+                    <h4>Pharmacie Al Amal</h4>
+                    <div class="pharmacy-details">
+                        <p>📍 Boulevard Mohammed V, Casablanca</p>
+                        <p>📞 +212 522 123 456</p>
+                        <p>🕐 Ouverte 24h/24</p>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="btn-call">📞 Appeler</button>
+                        <button class="btn-directions">🗺️ Itinéraire</button>
+                    </div>
+                </div>
+
+                <!-- Pharmacie 2 -->
+                <div class="pharmacy-card-garde">
+                    <div class="pharmacy-status open">● OUVERTE</div>
+                    <h4>Pharmacie Essalam</h4>
+                    <div class="pharmacy-details">
+                        <p>📍 Rue Allal Ben Abdellah, Maarif</p>
+                        <p>📞 +212 522 987 654</p>
+                        <p>🕐 20:00 - 08:00</p>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="btn-call">📞 Appeler</button>
+                        <button class="btn-directions">🗺️ Itinéraire</button>
+                    </div>
+                </div>
+
+                <!-- Pharmacie 3 -->
+                <div class="pharmacy-card-garde">
+                    <div class="pharmacy-status open">● OUVERTE</div>
+                    <h4>Pharmacie Centrale</h4>
+                    <div class="pharmacy-details">
+                        <p>📍 Avenue Hassan II, Centre-ville</p>
+                        <p>📞 +212 522 456 789</p>
+                        <p>🕐 Ouverte 24h/24</p>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="btn-call">📞 Appeler</button>
+                        <button class="btn-directions">🗺️ Itinéraire</button>
+                    </div>
+                </div>
+
+                <!-- Pharmacie 4 -->
+                <div class="pharmacy-card-garde">
+                    <div class="pharmacy-status opens-soon">◐ OUVRE BIENTÔT</div>
+                    <h4>Pharmacie du Progrès</h4>
+                    <div class="pharmacy-details">
+                        <p>📍 Quartier Gauthier, Casablanca</p>
+                        <p>📞 +212 522 321 654</p>
+                        <p>🕐 Ouverture à 20:00</p>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="btn-call">📞 Appeler</button>
+                        <button class="btn-directions">🗺️ Itinéraire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informations utiles -->
+            <div class="garde-info">
+                <h4>ℹ️ Informations utiles</h4>
+                <ul>
+                    <li>Les pharmacies de garde sont disponibles en dehors des heures normales</li>
+                    <li>Elles assurent un service continu 24h/24 ou en soirée/nuit</li>
+                    <li>En cas d'urgence, contactez le 141 (numéro d'urgence)</li>
+                    <li>Certaines pharmacies peuvent facturer un supplément en garde</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        // Initialiser la date du jour
+        document.getElementById('dateSelect').valueAsDate = new Date();
+        
+        function filterPharmacies() {
+            console.log('Filtrage des pharmacies...');
+        }
+        
+        function geolocate() {
+            alert('Géolocalisation en cours...');
+        }
+    </script>
+</body>
+</html>
+
